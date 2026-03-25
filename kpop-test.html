@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>K-pop女爱豆风格测试</title>
+    <link rel="stylesheet" href="kpop-style.css">
+</head>
+<body>
+    <div class="test-container">
+        <!-- 开始页面 -->
+        <div class="start-screen" id="start-screen">
+            <div class="start-content">
+                <h1>K-pop女爱豆风格测试</h1>
+                <p>通过回答10道问题，找到最适合你参考的女爱豆风格</p>
+                <button id="start-btn" class="btn">开始测试</button>
+            </div>
+        </div>
+        
+        <!-- 测试页面 -->
+        <div class="test-screen" id="test-screen">
+            <div class="test-content">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="question-number" id="question-number">问题 1/10</div>
+                <h2 class="question-text" id="question-text"></h2>
+                <div class="options" id="options"></div>
+            </div>
+        </div>
+        
+        <!-- 结果页面 -->
+        <div class="result-screen" id="result-screen">
+            <div class="result-content">
+                <h1>测试结果</h1>
+                <div class="result-idol" id="result-idol">
+                    <div class="idol-photo" id="idol-photo">
+                        <img src="https://console.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=K-pop%20female%20idol%20portrait%20professional%20photo&image_size=square" alt="Idol Photo">
+                    </div>
+                    <div class="idol-info">
+                        <h2 id="idol-name"></h2>
+                        <p id="idol-group"></p>
+                        <p id="idol-height"></p>
+                        <p id="idol-face-shape"></p>
+                        <p id="idol-skin-tone"></p>
+                        <p id="idol-feature-intensity"></p>
+                        <p id="idol-eye-shape"></p>
+                        <p id="idol-lip-thickness"></p>
+                        <p id="idol-hair-color"></p>
+                        <p id="idol-hair-length"></p>
+                        <p id="idol-body-shape"></p>
+                        <p id="idol-style"></p>
+                    </div>
+                </div>
+                <button id="restart-btn" class="btn">重新测试</button>
+            </div>
+        </div>
+    </div>
+    <script src="kpop-script.js"></script>
+</body>
+</html>

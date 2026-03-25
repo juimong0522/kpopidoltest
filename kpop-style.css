@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.test-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+}
+
+/* 开始页面 */
+.start-screen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.start-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.start-content h1 {
+    color: #ff6b8b;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.start-content p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* 测试页面 */
+.test-screen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    display: none;
+}
+
+.test-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b8b, #ff8fab);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.question-number {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.question-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 结果页面 */
+.result-screen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    display: none;
+}
+
+.result-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    width: 100%;
+}
+
+.result-content h1 {
+    color: #ff6b8b;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.result-idol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.idol-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.idol-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.idol-info {
+    text-align: left;
+    width: 100%;
+}
+
+.idol-info h2 {
+    color: #ff6b8b;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.idol-info p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 按钮样式 */
+.btn {
+    background: linear-gradient(135deg, #ff6b8b 0%, #ff8fab 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 139, 0.4);
+    width: 100%;
+    max-width: 200px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 139, 0.6);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* 选项按钮 */
+.option-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    background-color: #ffe6ea;
+    border-color: #ff6b8b;
+    transform: translateX(5px);
+}
+
+.option-btn:active {
+    transform: translateX(0);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .start-content,
+    .test-content,
+    .result-content {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .start-content h1,
+    .result-content h1 {
+        font-size: 24px;
+    }
+    
+    .start-content p {
+        font-size: 14px;
+    }
+    
+    .question-text {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .option-btn {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+    
+    .idol-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .idol-info h2 {
+        font-size: 20px;
+    }
+}
