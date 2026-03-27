@@ -55,6 +55,13 @@ body {
     color: #555;
 }
 
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
+
 /* 测试页面 */
 .test-screen {
     width: 100%;
@@ -176,10 +183,127 @@ body {
     text-align: center;
 }
 
-.idol-info p {
-    margin-bottom: 5px;
+.top-idol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.top-idol-info {
+    text-align: center;
+    width: 100%;
+}
+
+.top-idol-info h2 {
+    color: #ff6b8b;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.top-idol-info p {
+    margin-bottom: 10px;
     font-size: 14px;
     color: #555;
+}
+
+.summary {
+    background-color: #ffe6ea;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.other-idols {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.other-idol-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.other-idol-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.other-idol-info {
+    display: flex;
+    align-items: center;
+}
+
+.other-idol-rank {
+    background-color: #ff6b8b;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.other-idol-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.other-idol-group {
+    font-size: 12px;
+    color: #666;
+    margin-left: 8px;
+}
+
+.other-idol-match {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff6b8b;
+}
+
+.match-progress {
+    width: 100%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.match-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b8b, #ff8fab);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.match-percentage {
+    text-align: right;
+    font-size: 12px;
+    color: #ff6b8b;
+    font-weight: bold;
+    margin-top: 5px;
 }
 
 /* 按钮样式 */
